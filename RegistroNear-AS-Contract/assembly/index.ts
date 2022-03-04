@@ -1,13 +1,15 @@
-import {Context} from "near-sdk-as";
 
-//near view
-export function hello_world(): string {
-	return "Hello world";
+import { Context, logging, storage } from 'near-sdk-as'
+
+const DEFAULT_MESSAGE = 'Hello'
+
+export function getGreeting2(accountId: string): string | null {
+  return storage.get<string>(accountId, DEFAULT_MESSAGE)
 }
 
-//near call 
-export function hello(): string {
-	let user = Context.sender
-	return "Hello " + user;
-
+export function setGreeting2(message: string): void {
+  const accountId = Context.sender
+  logging.log(`Saving greeting "${message}" for account "${accountId}"`)
+  storage.set(accountId, message)
 }
+
