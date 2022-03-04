@@ -8,7 +8,7 @@ export class User {
   email: string;
   acquisitions: Course[];
   name: string;
-  postedBooks: Course[];
+  postedCourses: Course[];
 
   constructor(
     accountId: string,
