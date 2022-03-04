@@ -1,1 +1,10 @@
+/RegistroNear-AS-Contract/node_modules
+/RegistroNear-AS-Contract/out
+/RegistroNear-AS/node_modules
 /RegistroNear-AS/contract/node_modules
+/RegistroNear-AS-Contract/package-lock.json
+/RegistroNear-AS/package-lock.json
+/RegistroNear-AS/contract/package-lock.json
+RegistroNear-AS-Contract/package-lock.json
+RegistroNear-AS-Contract/out/main.wasm
+/RegistroNear-AS-Contract/neardev
