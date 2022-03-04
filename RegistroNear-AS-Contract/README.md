@@ -1,3 +1,39 @@
+# RegistroNear
+==================
+
+
+# RegistroNear nos ayuda para:
+
+## Pre-requisitos
+1. node.js >=12 instalado (https://nodejs.org)
+2. yarn instalado
+    ```bash
+    npm install --global yarn
+    ```
+   
+2. asbuild instalado
+    ```bash
+    npm install --globalyar asbuild
+    ```
+3. instalar dependencias
+    ```bash
+    yarn install --frozen-lockfile
+    ```
+4. crear una cuenta de NEAR en [testnet](https://docs.near.org/docs/develop/basics/create-account#creating-a-testnet-account)
+      
+5. instalar NEAR CLI
+    ```bash
+    yarn install --global near-cli
+    ```
+6. autorizar app para dar acceso a la cuenta de NEAR
+    ```bash
+    near login
+    ```
+
+npm run deploy
+
+# Readme - Original
+
 RegistroNear-AS Smart Contract
 ==================
 
