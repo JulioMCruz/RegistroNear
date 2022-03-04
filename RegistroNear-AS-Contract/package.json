@@ -1,0 +1,27 @@
+{
+  "name": "registronear-as-contract",
+  "version": "1.0.0",
+  "description": "Contrato de RegistroNear",
+  "private": true,
+  "scripts": {
+    "build": "asb",
+    "build:debug": "asb --target debug",
+    "test": "asp --nologo",
+    "deploy:contract": "near deploy"
+  },
+  "dependencies": {
+    "near-sdk-as": "3.1.0"
+  },
+  "devDependencies": {
+    "jest": "~26.6.2",
+    "jest-environment-node": "~26.6.2",
+    "near-cli": "~2.1.1",
+    "shelljs": "^0.8.4"
+  },
+  "compilerOptions": {
+    "types": [
+      "jest",
+      "node"
+    ]
+  }
+}
