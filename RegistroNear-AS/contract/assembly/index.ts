@@ -1,16 +1,3 @@
-/*
- * This is an example of an AssemblyScript smart contract with two simple,
- * symmetric functions:
- *
- * 1. setGreeting: accepts a greeting, such as "howdy", and records it for the
- *    user (account_id) who sent the request
- * 2. getGreeting: accepts an account_id and returns the greeting saved for it,
- *    defaulting to "Hello"
- *
- * Learn more about writing NEAR smart contracts with AssemblyScript:
- * https://docs.near.org/docs/develop/contracts/as/intro
- *
- */
 
 import { Context, logging, storage, PersistentMap } from 'near-sdk-as'
 import { User, users } from "../models/user";
@@ -19,17 +6,6 @@ import { Course, courses } from "../models/course";
 const DEFAULT_MESSAGE = 'Bienvenido'
 const recipientList = new PersistentMap<string,string[]>('RL');
 const totalSent = new PersistentMap<string,i32[]>('TS');
-
-export function getGreeting(accountId: string): string | null {
-  return storage.get<string>(accountId, DEFAULT_MESSAGE)
-}
-
-export function setGreeting(message: string): void {
-  const accountId = Context.sender
-  // Use logging.log to record logs permanently to the blockchain!
-  logging.log(`Saving greeting "${message}" for account "${accountId}"`)
-  storage.set(accountId, message)
-}
 
 export function registerUser(email: string, name: string): string {
   const newUser = new User(Context.sender, email, [], name, []);
