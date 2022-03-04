@@ -6,3 +6,5 @@
 /RegistroNear-AS/package-lock.json
 /RegistroNear-AS/contract/package-lock.json
 RegistroNear-AS-Contract/package-lock.json
+RegistroNear-AS-Contract/out/main.wasm
+/RegistroNear-AS-Contract/neardev
